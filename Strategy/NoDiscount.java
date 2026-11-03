@@ -1,4 +1,4 @@
-package strategy;
+package Strategy;
 
 public class NoDiscount implements DiscountStrategy {
     @Override

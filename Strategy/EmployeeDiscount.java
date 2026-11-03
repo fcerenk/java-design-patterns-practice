@@ -1,4 +1,4 @@
-package strategy;
+package Strategy;
 
 public class EmployeeDiscount implements DiscountStrategy{
     @Override

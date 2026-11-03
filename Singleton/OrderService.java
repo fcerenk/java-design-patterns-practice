@@ -1,4 +1,4 @@
-package singleton;
+package Singleton;
 
 public class OrderService {
     Logger instance = Logger.getInstance();

@@ -38,19 +38,19 @@ public double calculateFinalPrice() {
 
 There is no if/else in `ShoppingCart` anymore. The discount can also be changed at runtime with `setDiscountStrategy(...)`, so the same cart object can give different results.
 
-A simple way to think about it is a navigation app: the destination is the same, but you choose the way (car, walking, public transport). The app does not have one huge if/else for all of them. Each way is a separate strategy.
+A simple way to think about it is a navigation app: the destination is the same, but you choose the way (car, walking, public transport). The app does not have one huge if/else for all of them. Each way is a separate Strategy.
 
 ## Project Structure
 
 - `DiscountStrategy.java`: the interface (the contract)
 - `NoDiscount.java`, `StudentDiscount.java`, `VipDiscount.java`: the strategies
-- `EmployeeDiscount.java`: a new strategy added later to test the pattern
-- `ShoppingCart.java`: the context, it uses a strategy but does not know which one
+- `EmployeeDiscount.java`: a new Strategy added later to test the pattern
+- `ShoppingCart.java`: the context, it uses a Strategy but does not know which one
 - `Main.java`: creates a cart and switches strategies
 
 ## How to Run
 
-Run the `main` method in `Main.java`. It creates a cart with a total of 100, calculates the price with each strategy, and prints the result. The same cart object gives different prices when the strategy is changed with `setDiscountStrategy`.
+Run the `main` method in `Main.java`. It creates a cart with a total of 100, calculates the price with each Strategy, and prints the result. The same cart object gives different prices when the Strategy is changed with `setDiscountStrategy`.
 
 ## The Extension Test (Employee)
 
@@ -70,5 +70,5 @@ With my first version, the same change would need a new `else if` inside `calcul
 ## When NOT to Use It
 
 - When there are only one or two rules that will never change. A simple if/else is clearer in that case.
-- When the client has to choose a strategy, it must know the differences between them. For a user with no such knowledge, more classes can make the code harder to follow.
-- Each strategy is a new class, so a very large number of tiny strategies can make the project harder to navigate.
+- When the client has to choose a Strategy, it must know the differences between them. For a user with no such knowledge, more classes can make the code harder to follow.
+- Each Strategy is a new class, so a very large number of tiny strategies can make the project harder to navigate.

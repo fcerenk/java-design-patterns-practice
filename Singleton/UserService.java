@@ -1,4 +1,4 @@
-package singleton;
+package Singleton;
 
 public class UserService {
    Logger instance = Logger.getInstance();
