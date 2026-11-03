@@ -16,6 +16,13 @@ public class Main{
         System.out.println(beverage.getDescription() + " : " + beverage.getCost());
         beverage = new MilkDecorator(beverage);
         System.out.println(beverage.getDescription() + " : " + beverage.getCost());
+        beverage = new ChocolateDecorator(beverage);
+        System.out.println(beverage.getDescription() + " : " + beverage.getCost());
+        beverage = new SyrupDecorator(beverage);
+        System.out.println(beverage.getDescription() + " : " + beverage.getCost());
+        beverage = new WhippedCreamDecorator(beverage);
+        System.out.println(beverage.getDescription() + " : " + beverage.getCost());
+
 
 
     }
